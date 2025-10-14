@@ -1,6 +1,7 @@
 import './App.css';
 import freeCodeCampLogo from './images/freecodecamp-logo.png';
 import Button from './components/Button';
+import Counter from './components/Counter';
 
 function App() {
 
@@ -22,6 +23,9 @@ function App() {
           alt='Logo of freeCodeCamp'/>
       </div>
       <div className='main-container'>
+        <Counter 
+          numClicks={5}
+        />
         <Button
           isButtonClick={true}
           text='Click'
