@@ -2,17 +2,19 @@ import './App.css';
 import freeCodeCampLogo from './images/freecodecamp-logo.png';
 import Button from './components/Button';
 import Counter from './components/Counter';
+import { useState } from 'react';
 
 function App() {
 
+  const [numClicks, setNumClicks] = useState(0);
+
   const handleClick = () => {
-    console.log('Clic');
-  }
+    setNumClicks(numClicks + 1);
+  };
 
   const restartCounter = () => {
-    console.log('Restart');
-  } 
-
+    setNumClicks(0);
+  };
 
   return (
     <div className="App">
@@ -24,7 +26,7 @@ function App() {
       </div>
       <div className='main-container'>
         <Counter 
-          numClicks={5}
+          numClicks={numClicks}
         />
         <Button
           isButtonClick={true}
